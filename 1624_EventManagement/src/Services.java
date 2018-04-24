@@ -24,6 +24,10 @@ public class Services {
 		
 		opt = o;
 		add_on = a;
+		book(o);
+	}
+
+	public void book(Options o) {
 		amount= amount + price;
 		amount= amount + o.price;
 		
@@ -34,13 +38,19 @@ public class Services {
 	
 	public void printBill(){
 		Debug.Log("\nName : "+name);
-		Debug.Log("\nPrice : "+price);
+		Debug.Log("Price : "+price);
 		Debug.Log("\nOption : "+opt.name);
-		Debug.Log("\nOption : "+opt.price);
+		Debug.Log("Price : "+opt.price);
+		
+		Debug.Log("\nName : "+name);
+		Debug.Log("Price : "+price);
+		Debug.Log("\nOption : "+opt.name);
+		Debug.Log("Price : "+opt.price);
 		
 		for(int i=0; i<add_on.length; i++){
-			Debug.Log("\nAdon : "+add_on[i].name+" Price : "+add_on[i].price);
+			Debug.Log("\nAdd_On : "+add_on[i].name+"\nPrice : "+add_on[i].price);
 		}
+		
 		Debug.Log("\nTotal : "+amount);
 	}
 }
